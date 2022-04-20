@@ -1,0 +1,386 @@
+
+LUNAR MAGIC
+
+GUIDE
+
+ The unabridged, unprofessional-and-might-get-me-in-trouble-because-of-”plagiarization”-version-because-i-cant-be-bothered version
+
+
+
+Mightyfine words for the reader
+
+Kommentti keskeneräisen version lukijalle:
+-tässä ei ole vielä kaikkia placeholdereita eli tästä ei näy vielä aivan kaikkea millainen tämä lopulta tulee olemaan
+-Olen kirjoittanut tätä jonkinlaisena tajunannvirtana nyt, niin osa jutuista saattaa olla hieman erikoisesti. En ole kauheasti suodattanut ajatuksia mitä olen tähän laittanut
+-olen koittanut jonkinverran selittää ajatuksenjuoksuani, editoin kaikki tekstit kuitenkin järkevämmäksi lopulliseen versioon.
+-jos olet ikinä pelannut dwarf fortressia niin ”mamborambo has been taken by strange mood” on aika hyvä viittaus tähän tilanteeseen.
+
+
+	This is meant to be comprehensive guide for using lunar magic. I'll gather information from programs internal help document and internet. The guide's purpose is to be complete, easy to read document also with explanations to technical terms such as ”VRAM” for those who might not be familiar with such terms. I'll try to gather all the relevant information, links to other guides and info relevant to things in lunar magic.
+ The guide is written so that the table of contents can be easily used to find any function found from the program. Titles have been nested in same way as they are in the program.
+The language is english so that non finnish speakers too are able to easily read the guide as well as to be practice for myself. The guide is also meant to be used as portfolio piece so that i might more easily find work one day, hopefully.
+Some of the text isnt meant to be like this for the final version so if you are reading this line, you are reading the original unedited version of the guide.
+
+Table of Contents
+Mightyfine words for the reader	2
+Explanations	6
+ Hexdecimals	6
+ Terms	6
+File	7
+ open rom	7
+ open level number	7
+ level address	7
+ save level to rom	7
+ open next/previous level in rom	7
+ open level from file	7
+ save level to file	7
+ graphics	8
+  setup tile editor	8
+  extract/insert GFX from rom	8
+  Extract / insert exGFX	8
+ pallettes 	8
+  extract/import level palette to file	8
+  extract insert shared pallettes to rom	8
+ levels	9
+  export import levels to file	9
+  analyze resources in levels	9
+  clear original level data area	9
+  export multiple levels to image files	9
+  export level to image file	9
+ emulator	9
+  run rom in emulator	9
+  setup emulator	9
+  	10
+  run/stop internal emulator	10
+  pause, mute	10
+  swap f4	10
+ expand rom 2-8mb	10
+ restore	10
+  create full restore point	10
+  restore from restore point	10
+  create ips file from rom	10
+  apply ips file to rom	10
+ scan rom	10
+ recent files	10
+edit	11
+ layer 1, 2 mode	11
+ edit sprites mode	11
+ insert manual	11
+ edit manual	11
+ bring to front, send to back, bring forward, send backward	11
+ object size	11
+  X, Y increase / decrease	11
+ conditional direct map16	11
+ remap direct map16	12
+view	13
+ layer 1	13
+ layer 2	14
+ layer 3	14
+ sprites 	14
+ sprites hex code	15
+ screen exits	16
+ subscreen boundaries	17
+ game view screen	17
+ exit enabled tiles	18
+ tile surface outlines	18
+ line guide outlines	18
+ tile grid	18
+ zoom	19
+  100- 800%	19
+  filter	19
+  100% increments	19
+ level entrances	19
+ block contents	20
+ animation	20
+ next animated frame	20
+ reset animations	20
+ exAnimation triggers	20
+  custom triggers	21
+   0-F	21
+   next,previous	21
+   activate trigger	21
+  oneshot triggers	22
+   00-1F	22
+   next,previous	22
+   activate	22
+  manual triggers	22
+   0-F increment / decrement	22
+   next / previous 	22
+   increment / decrement manual frame	22
+  have star	22
+  timer below 100	22
+  have 5 yoshi coins	22
+ silver POW	22
+ POW	22
+ special world passed	22
+ invisible pow objects	22
+ other invisible objects	22
+ on/off switch on	22
+ conditional direct16 map on	22
+ 512 height background	22
+ translucent text background	22
+ switchblocks	24
+  green,yellow,blue,red switch blocks	24
+editors	24
+ add objects window	24
+ add sprites window	24
+ palette editor window	25
+ 8x8 editor window	26
+ 16x16 tile map editor window	26
+ background layer 2 editor window	27
+ overworld editor window	28
+level	29
+ super gfx bypass	29
+ layer3 gfx /tilemap bypass	29
+ gfx index in header	30
+ edit level exanimated frames	31
+ edit global exanimated frames	32
+ edit animation settings	32
+ modify screen exits	33
+ modify main and midway entrances	33
+ modify secondary entrances	34
+ scan for undefined exits	35
+ change properties in header	36
+ change properties in sprite header	36
+ change other properties	37
+ change layer 3 settings	38
+ change music timelimit settings	38
+options	39
+ general options	39
+ restorepoint options	39
+ change animation rate	39
+ use fastrom addressing for this rom	40
+ enable fastrom speed & apply patch	40
+ use sa-1 ram remap for this rom	41
+ use super fx ram remap for this rom	41
+ compression options for this rom	41
+ vram patch options for this rom	41
+help	42
+ Contents	42
+ about lunarmagic	42
+
+
+
+Explanations
+
+	Hexdecimals
+	Terms
+		Checksum
+		ROM
+		Emulator
+		
+
+
+
+
+
+File
+	open rom
+		Choose the rom you wish to use. This is effectively your working file so make sure 		you have unedited backup before you start editing.
+		American and japanese 1.0 supermario world snes roms are supported, also mario all stars + world snes rom is supported.
+		If program warns about corrupt checksum, it means ROM is corrupt or it has been modified with another (non lunar magic) program. This might cause serious problems later as there could be malicious code inserted to such rom or the rom might behave in unexpected ways. 
+	open level number
+		Opens one of the mario levels. There are multiple levels in ROM from 0-0x1FF(0-??), most are empty though.
+	level address
+		Opens exact ROM offset you specify. This is meant to be used to open levels that do not have pointer in the pointer table. You propably wont need to use this unless you are trying to do something clever.
+	save level to rom
+		Save your work and modify the ROM file you are using. 
+	open next/previous level in rom
+		Cycles forward or backward in list of levels in the ROM. 
+	open level from file
+		Opens previously created mario level file that contains all of the stuff that the level consists of. Its meant to be easy way to export singular levels. Note that file does not contain actual grapgics (GFX), use the EXTRACT GFX FILES to get those. It also doesnt contain Map16 data or shared palettes or any other level independent data. Lunar magic versions older than 1.6 work a bit differently so make sure you are using the latest version.
+	save level to file
+	Do the thing mentioned above and export the current level into its own file.
+	graphics
+		setup tile editor
+			You can use external editor to edit stuff. It will also save the settings you specify to your computers registry. You have to use specific programs meant to edit tiles, palettes and such. For example: tile layer pro https://www.romhacking.net/utilities/108/.
+		extract/insert GFX from rom
+		Creates GFX file from rom for tile editor program to edit. It will create graphics folder into your working directory(where the ROM file you are editing is) if it doesnt exist already.
+Inserting the file will replace the GFX files within the rom with one you specify.
+		Extract / insert exGFX
+		Ex in exGFX means ”extra” as in something that does not exist in original ROM files. These are additional graphics you might want to add to your romhack. If you want to use these you have to configure SUPER GFX BYPASS setting in LEVEL menu. More about that later.(laita linkki kohtaan)
+	pallettes	
+		extract/import level palette to file
+			Extract or replace the palette file from the ROM. Make sure the editor you are using is set to load 256 color entries. This one will use only the pallette of the level you have currently open.
+		extract insert shared pallettes to rom
+		This one will use all of the shared palettes in the rom to single file. The file will not include custom level palettes as they are stored with the level itself. 
+Shared pallettes are, more specifically -katso myöhemmin mitä kirjoittaa tähän lisää-
+
+	levels
+		export import levels to file
+		analyze resources in levels
+		clear original level data area
+		export multiple levels to image files
+		export level to image file
+	emulator
+		run rom in emulator
+		setup emulator
+		
+		run/stop internal emulator
+		pause, mute
+		swap f4
+	expand rom 2-8mb
+	restore
+		create full restore point
+		restore from restore point
+		create ips file from rom
+		apply ips file to rom
+	scan rom
+		
+	recent files
+
+edit
+	layer 1, 2 mode
+	edit sprites mode
+	insert manual
+	edit manual
+	bring to front, send to back, bring forward, send backward
+	object size
+		X, Y increase / decrease
+	conditional direct map16
+		
+	remap direct map16
+		
+view
+	layer 1
+		
+	layer 2
+
+	layer 3
+	sprites	
+	sprites hex code
+
+	screen exits
+
+	subscreen boundaries
+
+	game view screen
+
+	exit enabled tiles
+	tile surface outlines
+
+	line guide outlines
+
+	tile grid
+	
+
+	zoom
+		100- 800%
+		filter
+		100% increments
+	level entrances
+
+	block contents
+
+	animation
+	next animated frame
+	reset animations
+	exAnimation triggers
+		custom triggers
+			0-F
+			next,previous
+			activate trigger
+		oneshot triggers
+			00-1F
+			next,previous
+			activate
+		manual triggers
+			0-F increment / decrement
+			next / previous 
+			increment / decrement manual frame
+		have star
+		timer below 100
+		have 5 yoshi coins
+	silver POW
+	POW
+	special world passed
+	invisible pow objects
+	other invisible objects
+	on/off switch on
+	conditional direct16 map on
+	512 height background
+	translucent text background
+
+
+	switchblocks
+		green,yellow,blue,red switch blocks
+editors
+	add objects window
+		
+	add sprites window
+		
+		
+	palette editor window
+		
+	8x8 editor window
+	
+	16x16 tile map editor window
+	
+	background layer 2 editor window
+	
+	overworld editor window
+	
+level
+	super gfx bypass
+	
+	layer3 gfx /tilemap bypass
+	
+	gfx index in header
+	
+	edit level exanimated frames
+	
+	edit global exanimated frames
+	
+	edit animation settings
+	
+	modify screen exits
+	
+	modify main and midway entrances
+	
+	
+	modify secondary entrances
+	
+	scan for undefined exits
+	
+
+	change properties in header
+	
+	change properties in sprite header
+	
+	change other properties
+
+	change layer 3 settings
+	
+	change music timelimit settings
+	
+options
+	general options
+	
+	restorepoint options
+	
+
+	change animation rate
+
+	use fastrom addressing for this rom
+
+	enable fastrom speed & apply patch
+
+	use sa-1 ram remap for this rom
+	use super fx ram remap for this rom
+	compression options for this rom
+
+	vram patch options for this rom
+
+
+help
+	Contents
+	
+	about lunarmagic
+
+
+Sources:
+Some parts might be directly from the source materials which would make those concerned about plagiarization very mad if not properly referenced. For the purposes of getting the guide done i'll write the guide first and worry about references later if at all. I will use direct quotations if its more useful than trying to reword something myself. I will also add my own comments, suggestions and analyzes. Should it be more beneficial to mark which is which than not to i'll do it, otherwise you can run the guide through some plagiarization detection software if that is your kink.
+Here is the list of sources where i have looked for information, maybe i'll remember to add it all.
+
+Lunar magic internal help document
+https://www.romhacking.net/
