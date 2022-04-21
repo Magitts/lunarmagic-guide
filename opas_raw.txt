@@ -353,72 +353,134 @@ How you use this could be relevant to memory use, for example: having one block 
 In their infinite wisdom, Nintendo coders decreed that sometimes if object size is 0 it is to be  misinterpreted as size of 256. Lunar magic, in its just as infinite wisdom emulates this behaviour. (I dont know how often or in what situations this happens. It might also be noteworthy to mention that certain less serious parts of the guide should be viewed as that, less serious, in case someone thinks i'm actually implying nintendo puts bugs in their code on purpose.) Keep in mind that if you have objects that extend way beyond level boundaries might overwrite critical ram locations.
 
 	conditional direct map16
-		
+		With this, you can change conditional attributes of all direct map16 access objects. 
+
+	Flag number: ”The Flag number to check is the flag number from a RAM table of bits at $7FC060-F (bits are ordered from low to high). The values in this table are not initialized in any way... it's up to you to insert the necessary ASM code to initialize and manipulate the bits. If the specified flag in the table is not enabled, the object will not be rendered when the level loads.
+” 
+”if the Always show objects option is checked, the object will always show up and will just add 0x100 to all Map16 tiles in the object if the flag is enabled. This effectively allows showing 2 different states instead of just having the object be displayed or not.
+”
+”If the Remove flag check option is checked, all selected Direct Map16 Access objects will be converted back to normal Direct Map16 objects (meaning they will no longer be conditional and will always be displayed).
+”
+
+From the lunar magic help file
+
+	More about using RAM and stuff
+		Tutki lisää myöhemmin
+
+
 	remap direct map16
+You can use this to remap tiles based on some criteria. Its useful for fixing tiles that you have moded in the editor and that have been misaligned because level still refers to the original spots.
+
+Remapping happens by entering paired comma separated values in the textbox. 
+First value can be single value or range of values. It determies what you want to change.
+Second value is for what you want to change the thing into.
+Each pair is to be on their own line or they can be separated with more commas.
+Example entries: 100,25   | 100-101,25 |   
+You can also use operators, for example:
+100-101,+25 will change 100 to 125 and 101 to 126,  - will do the opposite and change 100 to DB and 101 to DC.
+There are also M and R.
+100-101,M125 will also change 100 to 125 and 101 to 126
+100-101,R25 will change 100 to 25 and 101 to 26
+
+If you have groups of tiles pasted as single DM16 object, the pattern will be based on upper left tile number. So if you have pattern of 10 and 20, change 10 just and it will change 20 too. Though if you change 20 then it wont affect 10 because the pattern is based on 10 in this example.
+When remapping stuff, remember that source values always refer to tiles as they currently are and not how they will be after remapping.
+For example:
+sequence 100,25,25,100 will swap tiles 100 and 25 and
+100,25,100,30 will do nothing for the first pair 100,25 as its superseded by the second pair.
+
 		
 view
 	layer 1
-		
+		Example picture of layer 1. 
 	layer 2
 
+Example picture of layer 2. This layer can also scroll independently of the first layer with certain commans placed into sprite data.
 	layer 3
+Layer 3 is for image. It can be useful when you want to use layer 2 as level instead of background. It could also be used for effects like mist or leaf rain. Normally mario can't interact with this layer but tides are exception to this. For that to happen it reuses level map in ram for layer 2 so then you can't have layer 2 as interactable. Part of layer3 is also used for status bar at top of screen.
 	sprites	
-	sprites hex code
-
+	
+Sprites are displayed above all other layers, though this is only in lunar magic and not in game. Any sprite not implemented will appear as large X by default though you can change this in gfx file 0.
+sprites hex code
+This will let you see the hexcodes of individual sprites.
+Top number begins with X and is followed by extra info field value, usually 0. lower 2 numbers represent sprite command number, which is the number you refer to that particular sprite. For example, on the picture there is the dinosaur mob with command code AB. Both share the same command code as it refers to the sprite and not individual sprite entity.
 	screen exits
-
+This view lets you see screen exits, which is useful for example when dealing with door or pipe exits. Any screen with outline but that isnt highlighte has no exit and leads to undefined level.
+Here is example of how it displays screen with exit in it.
 	subscreen boundaries
-
+This displays the subscreens. Sometimes objects break apart or otherwise work oddly when placed on subscreen boundary.
 	game view screen
-
+This view can be used to design what will be visible on the screen. To see what mario sees on certain location, drag the screen with alt+M1 over the place, align the location with desired band (4 band intersection points in the middle would be commonly used if screen scrolls at will.) Red is scrolling right, purple is climbing down. Colors on opposite are for opposite directions. 2 extra red and green are for if player looks further using L/R buttons. It isnt pixel perfect.
 	exit enabled tiles
+This highlights any exits in the screen.
 	tile surface outlines
+This makes easier to see slopes and solid tiles. Green line can be walked on, green squares indicate solid on all sides tiles, red is for things that hurt, blue is for slopes with water (none of those in default rom) and yellow for things that affect sprites other than mario (no examples to be found either)
 
 	line guide outlines
-
+This shows outlines for lineguide tiles. Its meant to be used when you want to use lineguides but dont have proper graphics loaded to see them. You need separate patch to have another tile act as lineguide tile.
 	tile grid
-	
+	This lets you see more easily how things will be placed.
 
 	zoom
 		100- 800%
+		You can zoom up to 800%
 		filter
+		If directX isnt being used some zoom levels and filtering might not be available.
 		100% increments
+		This toggles between 25% increments and 100% increments.
 	level entrances
-
+This shows entrances to the level, as demonstraded by the picture.
 	block contents
+	This lets you see contents of blocks like question blocks. 
 
-	animation
+	Animation
+This toggles whether animations run in lunar magic or not while you are editing the level.
+
 	next animated frame
+This will advance the animations by 1 frame. Might be useful if you are testing custom animations.
 	reset animations
+This will reset animations back to starting frame.
 	exAnimation triggers
+From this submenu you can toggle triggers added through exAnimation to preview their effects. There are many manual triggers so you can setup keyboard actions for them.
 		custom triggers
 			0-F
 			next,previous
 			activate trigger
+
 		oneshot triggers
 			00-1F
 			next,previous
-			activate
+			Activate
+
 		manual triggers
 			0-F increment / decrement
 			next / previous 
 			increment / decrement manual frame
+
 		have star
 		timer below 100
 		have 5 yoshi coins
 	silver POW
+	Simulates what happens when you hit silver pow, black piranha turns to coin and most others to silver coins.
 	POW
+	Simulates what happens if you hit blue pow. Turns coins to brown blocks, can reveal hidden doors and other hidden objects.
 	special world passed
+When player passes special world, GFX file 0x31 is loaded over part of standard sprite graphics. It turns green shells yellow and red shells blue. Setting lets you simulate this.
 	invisible pow objects
+Toggles between invisibility states of objects. Invisible objects are shown as translucent when on and invisible when setting is off.
 	other invisible objects
+Toggles invisibility of other objects like kaizo blocks.
 	on/off switch on
+Lets you simulate what happens when switch is on and off.
 	conditional direct16 map on
+Lets you simulate when all flags are on or off on direct map16 objects.
 	512 height background
+”This will enable backgrounds in vertical levels to be viewed in the editor so that they tile vertically with a pixel height of 512 instead of the old 432 height that all Nintendo's backgrounds use. This setting only affects the appearance in the editor... in the game, the background will always use the full 512 pixels.” -help file
 	translucent text background
 
-
+As shown on the picture.
 	switchblocks
 		green,yellow,blue,red switch blocks
+		There are many colors for switch colors that can be used.
 editors
 	add objects window
 		
