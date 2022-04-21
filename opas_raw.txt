@@ -3,7 +3,7 @@ LUNAR MAGIC
 
 GUIDE
 
- 
+ By Mamborambo
 
 
 
@@ -37,123 +37,123 @@ File	8
  pallettes 	9
   extract/import level palette to file	9
   extract insert shared pallettes to rom	9
- levels	9
-  Export/import multiple levels to file	9
-  analyze resources in levels	10
-  clear original level data area	10
-  export multiple levels to image files	11
-  export level to image file	11
+ levels	10
+  Export/import multiple levels to file	10
+  analyze resources in levels	11
+  clear original level data area	11
+  export multiple levels to image files	12
+  export level to image file	12
  emulator	12
   run rom in emulator	12
-  setup emulator	12
-  	12
-  run/stop internal emulator	12
-  pause, mute	12
-  swap f4	12
- expand rom 2-8mb	12
- restore	12
-  create full restore point	12
-  restore from restore point	12
-  create ips file from rom	13
-  apply ips file to rom	13
- scan rom	13
- recent files	13
-edit	14
- layer 1, 2 mode	14
- edit sprites mode	14
- insert manual	14
- edit manual	14
- bring to front, send to back, bring forward, send backward	14
- object size	14
-  X, Y increase / decrease	14
- conditional direct map16	14
- remap direct map16	14
-view	15
- layer 1	15
- layer 2	16
- layer 3	16
- sprites 	16
- sprites hex code	17
- screen exits	18
- subscreen boundaries	18
- game view screen	19
- exit enabled tiles	19
- tile surface outlines	19
- line guide outlines	19
- tile grid	20
- zoom	20
-  100- 800%	20
-  filter	20
-  100% increments	20
- level entrances	20
- block contents	21
- animation	21
- next animated frame	21
- reset animations	21
- exAnimation triggers	21
-  custom triggers	21
-   0-F	21
-   next,previous	21
-   activate trigger	21
-  oneshot triggers	21
-   00-1F	21
-   next,previous	21
-   activate	21
-  manual triggers	21
-   0-F increment / decrement	21
-   next / previous 	21
-   increment / decrement manual frame	21
-  have star	21
-  timer below 100	21
-  have 5 yoshi coins	21
- silver POW	22
- POW	22
- special world passed	22
- invisible pow objects	22
- other invisible objects	22
- on/off switch on	22
- conditional direct16 map on	22
- 512 height background	22
- translucent text background	22
- switchblocks	22
-  green,yellow,blue,red switch blocks	22
-editors	22
- add objects window	22
- add sprites window	23
- palette editor window	24
- 8x8 editor window	24
- 16x16 tile map editor window	25
- background layer 2 editor window	26
- overworld editor window	27
-level	28
- super gfx bypass	28
- layer3 gfx /tilemap bypass	28
- gfx index in header	29
- edit level exanimated frames	30
- edit global exanimated frames	30
- edit animation settings	31
- modify screen exits	31
- modify main and midway entrances	31
- modify secondary entrances	32
- scan for undefined exits	33
- change properties in header	33
- change properties in sprite header	34
- change other properties	34
- change layer 3 settings	35
- change music timelimit settings	35
-options	36
- general options	36
- restorepoint options	36
- change animation rate	36
- use fastrom addressing for this rom	37
- enable fastrom speed & apply patch	37
- use sa-1 ram remap for this rom	38
- use super fx ram remap for this rom	38
- compression options for this rom	38
- vram patch options for this rom	38
-help	39
- Contents	39
- about lunarmagic	39
+  setup emulator	13
+  	13
+  run/stop internal emulator	13
+  pause, mute	13
+  swap f4/ctrl+f4	13
+ expand rom 2-8mb	13
+ Restore	13
+  create full restore point	13
+  restore from restore point	14
+  create ips file from rom	14
+  apply ips file to rom	14
+ scan rom	14
+ recent files	15
+edit	15
+ layer 1, 2 mode	15
+ edit sprites mode	16
+ insert manual	16
+ edit manual	17
+ bring to front, send to back, bring forward, send backward	17
+ object size	17
+  X, Y increase / decrease	17
+ conditional direct map16	17
+ remap direct map16	18
+view	18
+ layer 1	18
+ layer 2	19
+ layer 3	19
+ sprites 	19
+ sprites hex code	20
+ screen exits	21
+ subscreen boundaries	21
+ game view screen	22
+ exit enabled tiles	22
+ tile surface outlines	22
+ line guide outlines	22
+ tile grid	23
+ zoom	23
+  100- 800%	23
+  filter	23
+  100% increments	23
+ level entrances	23
+ block contents	24
+ animation	24
+ next animated frame	24
+ reset animations	24
+ exAnimation triggers	24
+  custom triggers	24
+   0-F	24
+   next,previous	24
+   activate trigger	24
+  oneshot triggers	24
+   00-1F	24
+   next,previous	24
+   activate	24
+  manual triggers	24
+   0-F increment / decrement	24
+   next / previous 	24
+   increment / decrement manual frame	24
+  have star	24
+  timer below 100	25
+  have 5 yoshi coins	25
+ silver POW	25
+ POW	25
+ special world passed	25
+ invisible pow objects	25
+ other invisible objects	25
+ on/off switch on	25
+ conditional direct16 map on	25
+ 512 height background	25
+ translucent text background	25
+ switchblocks	26
+  green,yellow,blue,red switch blocks	26
+editors	26
+ add objects window	26
+ add sprites window	26
+ palette editor window	27
+ 8x8 editor window	27
+ 16x16 tile map editor window	28
+ background layer 2 editor window	29
+ overworld editor window	30
+level	31
+ super gfx bypass	31
+ layer3 gfx /tilemap bypass	31
+ gfx index in header	32
+ edit level exanimated frames	33
+ edit global exanimated frames	33
+ edit animation settings	34
+ modify screen exits	34
+ modify main and midway entrances	34
+ modify secondary entrances	35
+ scan for undefined exits	36
+ change properties in header	36
+ change properties in sprite header	37
+ change other properties	37
+ change layer 3 settings	38
+ change music timelimit settings	38
+options	39
+ general options	39
+ restorepoint options	39
+ change animation rate	40
+ use fastrom addressing for this rom	40
+ enable fastrom speed & apply patch	40
+ use sa-1 ram remap for this rom	41
+ use super fx ram remap for this rom	41
+ compression options for this rom	41
+ vram patch options for this rom	41
+help	42
+ Contents	42
+ about lunarmagic	42
 
 
 
@@ -299,19 +299,59 @@ Incremental restore points save space as they will track only the changes that h
 		apply ips file to rom
 	Here you can apply the patch you made to your romhack. You can also use separate patching program, like Lunar IPS you can find from here https://fusoya.eludevisibility.org/. 
 	scan rom
-		This will show you quickly some information about your rom. Before you jump to conclusions there are no rats in your computer invading your rom as their sovereign nation, plotting your demise and building their devilish machines to conquer us all. Here is quite good explanation about what RAT means:  https://www.smwcentral.net/?p=viewthread&t=102891
+		This will show you quickly some information about your rom. Before you jump to conclusions there are no rats in your computer invading your rom as their sovereign nation, plotting your demise and building their devilish machines to conquer us all. Here is quite good explanation about what RAT means:  https://www.smwcentral.net/?p=viewthread&t=102891 . I have explained it in the guide on previous part it was relevant. Yes, i do expect you to read it all from start to finish in orderly fashion.
 
-For information about Map16, look here: https://www.smwcentral.net/?p=faq&page=1219828-map16. Its list of all the different tiles in your level.
+For information about Map16, look here: https://www.smwcentral.net/?p=faq&page=1219828-map16. Its list of all the different tiles in your level. Here it means you are propably using older version of lunar magic if its not 0.
+
+If unprotected space is not 0 it propably means you havent mainained your romhack very well or you have been cheating on lunar magic sempai by using 3rd party tools.
+
+Unusable space keeps track of how much wasted space there is. It should be 0 or very small number. Basically it tracks how many free space gaps of 8 or fewer bytes there are. 
+
+Free space is how much room you have left in your rom for adding your 4-shell jumps and pick-a-pipe mazes. Its in hexadecimal for sake of love (or maybe some technical reason).
+
+Total user space is the maximum size of the expanded rom minus the size of original.
+
+Conflicting rats means how many rats are trying to protect same area. This should be 0 and you should contact the proper authorities if it isnt. Common causes for this is cheating on lunar magic sempai by using  third party tools *spit*. You should rather use restore point than try to wheel and deal with the rats to resolve the conflict. If you do decide enough is enough and its time to end the ratwar once and for all!!.. - i mean if you want to resolve the conflict yourself the positions will be  recorded in rats.log file.
+
+Conflicting space means how big the area is rats are fighting over.
+
+Rat structures tells how many rats were detected in user area. This changes based on the level you are on and grows depending on how many new things you add to your rom. Lunar magic will take care of assigning rats usually by itself.
+
+Largest free 32kb bank means largest 32kb bank that can be protected with a rat. If its 8000 it means full 32kb bank is available for data. 
+
+Largest free area is for largest free area when ignoring bank boundaries. SMW cant mostly cross bank boundaries (explain better?) but compressed graphics can.
+
+Last lunar magic version used lets you see if someone has been using older version of lunar magic to fuckup your precious troll kaizo level- i mean its so if for example you are modifying some older romhack you can see which version was used (which might be needed even in modern day and age if someone has been using third party asm hacks that are incompitable with newer versions of lunar magic.)
+
 	recent files
+	Shows list of last 10 rom or mwl files you have been using.
 
 edit
 	layer 1, 2 mode
+	Select which layer you want to edit. Layer 1 is the foreground → area where that plumber guy is jumping and causing mayhem and layer 2 is the background where happy clouds and bushes watch you fail that trickjump 3031 times in row. Not all levels have second layer and might have just a background image. 
 	edit sprites mode
+	This is the mode where you can add all those hammerbros and bowsers you were planning to have in your fine romhack.
 	insert manual
+	Whith this you can add stuff to level exactly as specified. You will most likely be using this for inserting custom sprites as its easier to add stuff from 'add objects' or 'add sprites' -window.
+Command specifies which object you are referring to, the object number.
+Screen number specifies which screen you want the object to be placed
+If you are on add sprite mode, manual insert has Extra bits in place of size/type. This should normally be left as 0 since very few sprites in game actually use it, for example secret goal point tape. Its more often used by custom sprites inserted by third party tools.
+(here are for example screens 03, 04, 05)
+XY position specifies the coordinates to use
+You can see them more easily here as you mouse over the screen.
+
+Size/type/ext lets you change the size of the object, its type or extended object number. What ext does depends on the object. 
+Extension is for objects that can have additional parameters and should be used only for things you have actually added code into the game that does something with it, otherwise it will cause errors.
 	edit manual
+	Lets you edit manually the parameters of a sprite or some other thing. Its propably easier to just press alt and rightclick the thing you want to edit than do something fancy and use the top menu to do it.
 	bring to front, send to back, bring forward, send backward
+	Works in same way as it does with pictures in text editors. It lets you modify what appears on top of what.
 	object size
 		X, Y increase / decrease
+		This menu command does not work to sprites as they dont have x/y component. Its used to modify objects 
+How you use this could be relevant to memory use, for example: having one block size of 2 vs having 2 blocks size of 1 → having 2 blocks will use more memory.
+In their infinite wisdom, Nintendo coders decreed that sometimes if object size is 0 it is to be  misinterpreted as size of 256. Lunar magic, in its just as infinite wisdom emulates this behaviour. (I dont know how often or in what situations this happens. It might also be noteworthy to mention that certain less serious parts of the guide should be viewed as that, less serious, in case someone thinks i'm actually implying nintendo puts bugs in their code on purpose.) Keep in mind that if you have objects that extend way beyond level boundaries might overwrite critical ram locations.
+
 	conditional direct map16
 		
 	remap direct map16
