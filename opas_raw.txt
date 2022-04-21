@@ -3,17 +3,13 @@ LUNAR MAGIC
 
 GUIDE
 
- The unabridged, unprofessional-and-might-get-me-in-trouble-because-of-”plagiarization”-version-because-i-cant-be-bothered version
+ 
 
 
 
 Mightyfine words for the reader
 
-Kommentti keskeneräisen version lukijalle:
--tässä ei ole vielä kaikkia placeholdereita eli tästä ei näy vielä aivan kaikkea millainen tämä lopulta tulee olemaan
--Olen kirjoittanut tätä jonkinlaisena tajunannvirtana nyt, niin osa jutuista saattaa olla hieman erikoisesti. En ole kauheasti suodattanut ajatuksia mitä olen tähän laittanut
--olen koittanut jonkinverran selittää ajatuksenjuoksuani, editoin kaikki tekstit kuitenkin järkevämmäksi lopulliseen versioon.
--jos olet ikinä pelannut dwarf fortressia niin ”mamborambo has been taken by strange mood” on aika hyvä viittaus tähän tilanteeseen.
+
 
 
 	This is meant to be comprehensive guide for using lunar magic. I'll gather information from programs internal help document and internet. The guide's purpose is to be complete, easy to read document also with explanations to technical terms such as ”VRAM” for those who might not be familiar with such terms. I'll try to gather all the relevant information, links to other guides and info relevant to things in lunar magic.
@@ -379,7 +375,7 @@ help
 
 
 Sources:
-Some parts might be directly from the source materials which would make those concerned about plagiarization very mad if not properly referenced. For the purposes of getting the guide done i'll write the guide first and worry about references later if at all. I will use direct quotations if its more useful than trying to reword something myself. I will also add my own comments, suggestions and analyzes. Should it be more beneficial to mark which is which than not to i'll do it, otherwise you can run the guide through some plagiarization detection software if that is your kink.
+Some parts might be directly from the source materials which would make those concerned about plagiarization very mad if not properly referenced. For the purposes of getting the guide done i'll write the guide first and worry about references later if at all. I will use direct quotations if its more useful than trying to reword something myself. I will also add my own comments, suggestions and analyzes. 
 Here is the list of sources where i have looked for information, maybe i'll remember to add it all.
 
 Lunar magic internal help document
