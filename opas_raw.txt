@@ -20,92 +20,92 @@ Some of the text isnt meant to be like this for the final version so if you are 
 Table of Contents
 Mightyfine words for the reader	2
 Explanations	6
- Hexdecimals	6
- Terms	6
-File	7
- open rom	7
- open level number	7
- level address	7
- save level to rom	7
- open next/previous level in rom	7
- open level from file	7
- save level to file	7
- graphics	8
-  setup tile editor	8
-  extract/insert GFX from rom	8
-  Extract / insert exGFX	8
- pallettes 	8
-  extract/import level palette to file	8
-  extract insert shared pallettes to rom	8
+ Number systems	6
+ Terms	7
+File	8
+ open rom	8
+ open level number	8
+ level address	8
+ save level to rom	8
+ open next/previous level in rom	8
+ open level from file	8
+ save level to file	8
+ graphics	9
+  setup tile editor	9
+  extract/insert GFX from rom	9
+  Extract / insert exGFX	9
+ pallettes 	9
+  extract/import level palette to file	9
+  extract insert shared pallettes to rom	9
  levels	9
-  export import levels to file	9
-  analyze resources in levels	9
-  clear original level data area	9
-  export multiple levels to image files	9
-  export level to image file	9
- emulator	9
-  run rom in emulator	9
-  setup emulator	9
-  	10
-  run/stop internal emulator	10
-  pause, mute	10
-  swap f4	10
- expand rom 2-8mb	10
- restore	10
-  create full restore point	10
-  restore from restore point	10
-  create ips file from rom	10
-  apply ips file to rom	10
- scan rom	10
- recent files	10
-edit	11
- layer 1, 2 mode	11
- edit sprites mode	11
- insert manual	11
- edit manual	11
- bring to front, send to back, bring forward, send backward	11
- object size	11
-  X, Y increase / decrease	11
- conditional direct map16	11
- remap direct map16	12
-view	13
- layer 1	13
- layer 2	14
- layer 3	14
- sprites 	14
- sprites hex code	15
- screen exits	16
- subscreen boundaries	17
- game view screen	17
- exit enabled tiles	18
- tile surface outlines	18
- line guide outlines	18
- tile grid	18
- zoom	19
-  100- 800%	19
-  filter	19
-  100% increments	19
- level entrances	19
- block contents	20
- animation	20
- next animated frame	20
- reset animations	20
- exAnimation triggers	20
+  Export/import multiple levels to file	9
+  analyze resources in levels	10
+  clear original level data area	10
+  export multiple levels to image files	11
+  export level to image file	11
+ emulator	12
+  run rom in emulator	12
+  setup emulator	12
+  	12
+  run/stop internal emulator	12
+  pause, mute	12
+  swap f4	12
+ expand rom 2-8mb	12
+ restore	12
+  create full restore point	12
+  restore from restore point	12
+  create ips file from rom	13
+  apply ips file to rom	13
+ scan rom	13
+ recent files	13
+edit	14
+ layer 1, 2 mode	14
+ edit sprites mode	14
+ insert manual	14
+ edit manual	14
+ bring to front, send to back, bring forward, send backward	14
+ object size	14
+  X, Y increase / decrease	14
+ conditional direct map16	14
+ remap direct map16	14
+view	15
+ layer 1	15
+ layer 2	16
+ layer 3	16
+ sprites 	16
+ sprites hex code	17
+ screen exits	18
+ subscreen boundaries	18
+ game view screen	19
+ exit enabled tiles	19
+ tile surface outlines	19
+ line guide outlines	19
+ tile grid	20
+ zoom	20
+  100- 800%	20
+  filter	20
+  100% increments	20
+ level entrances	20
+ block contents	21
+ animation	21
+ next animated frame	21
+ reset animations	21
+ exAnimation triggers	21
   custom triggers	21
    0-F	21
    next,previous	21
    activate trigger	21
-  oneshot triggers	22
-   00-1F	22
-   next,previous	22
-   activate	22
-  manual triggers	22
-   0-F increment / decrement	22
-   next / previous 	22
-   increment / decrement manual frame	22
-  have star	22
-  timer below 100	22
-  have 5 yoshi coins	22
+  oneshot triggers	21
+   00-1F	21
+   next,previous	21
+   activate	21
+  manual triggers	21
+   0-F increment / decrement	21
+   next / previous 	21
+   increment / decrement manual frame	21
+  have star	21
+  timer below 100	21
+  have 5 yoshi coins	21
  silver POW	22
  POW	22
  special world passed	22
@@ -115,55 +115,84 @@ view	13
  conditional direct16 map on	22
  512 height background	22
  translucent text background	22
- switchblocks	24
-  green,yellow,blue,red switch blocks	24
-editors	24
- add objects window	24
- add sprites window	24
- palette editor window	25
- 8x8 editor window	26
- 16x16 tile map editor window	26
- background layer 2 editor window	27
- overworld editor window	28
-level	29
- super gfx bypass	29
- layer3 gfx /tilemap bypass	29
- gfx index in header	30
- edit level exanimated frames	31
- edit global exanimated frames	32
- edit animation settings	32
- modify screen exits	33
- modify main and midway entrances	33
- modify secondary entrances	34
- scan for undefined exits	35
- change properties in header	36
- change properties in sprite header	36
- change other properties	37
- change layer 3 settings	38
- change music timelimit settings	38
-options	39
- general options	39
- restorepoint options	39
- change animation rate	39
- use fastrom addressing for this rom	40
- enable fastrom speed & apply patch	40
- use sa-1 ram remap for this rom	41
- use super fx ram remap for this rom	41
- compression options for this rom	41
- vram patch options for this rom	41
-help	42
- Contents	42
- about lunarmagic	42
+ switchblocks	22
+  green,yellow,blue,red switch blocks	22
+editors	22
+ add objects window	22
+ add sprites window	23
+ palette editor window	24
+ 8x8 editor window	24
+ 16x16 tile map editor window	25
+ background layer 2 editor window	26
+ overworld editor window	27
+level	28
+ super gfx bypass	28
+ layer3 gfx /tilemap bypass	28
+ gfx index in header	29
+ edit level exanimated frames	30
+ edit global exanimated frames	30
+ edit animation settings	31
+ modify screen exits	31
+ modify main and midway entrances	31
+ modify secondary entrances	32
+ scan for undefined exits	33
+ change properties in header	33
+ change properties in sprite header	34
+ change other properties	34
+ change layer 3 settings	35
+ change music timelimit settings	35
+options	36
+ general options	36
+ restorepoint options	36
+ change animation rate	36
+ use fastrom addressing for this rom	37
+ enable fastrom speed & apply patch	37
+ use sa-1 ram remap for this rom	38
+ use super fx ram remap for this rom	38
+ compression options for this rom	38
+ vram patch options for this rom	38
+help	39
+ Contents	39
+ about lunarmagic	39
 
 
 
 Explanations
 
-	Hexdecimals
+	Number systems
+	Hexadecimals	
+	0-F
+	1,2,3,4,5,6,7,8,9,10,A,B,C,D,E,F
+	1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16
+
+	More about it in here: https://owlcation.com/stem/Convert-Hex-to-Decimal
+	
+	Hexadecimals are numbersystem based on 16 rather than 10. On decimals numbers start repeating after 9, meaning you get numbers like 10, 11 → numbers consist of combinations of singular numbers. On hexadecimal, this happens after 16 and to represent it in more familiar 10-system, letters had to be used. 11 in hexadecimal is (when converted to 10-system) 17 and letters appear on 'normal' number 26 (1a). 
+	Converting hexadecimals to decimals requires some math and I propably wont go into that here as this is supposed to be short summary for those unfamiliar. The link should have some explanation.
+
+ Numbers like 0x001 are also hexadecimals. 0x just means number after it should be considered to be a hexadecimal
+Here is good explanation: https://stackoverflow.com/questions/9539857/0x00000000-hexadecimal
+Amount of numbers in 0x0000 number can also be relevant, as it tells the size of the number in terms of memory. 
+
+		
+
+	Binary
+	1,0
+	
+	1,2,3,4,5
+	1,10,11,100,101
+	
+	Link to more reading: https://www.mathsisfun.com/binary-number-system.html
+	On binary, there are just 2 numbers and everything basically revolves around number 2. 1 is 1 but 2 is 10 and 3 is 11. Once you grasp the logic its more simple to understand. Basically the first (rightmost) number in binary number is always either 1 or 0 (1 or 0 in 10-system too), second-rightmost is 2 or 0, third 4 or 0 and so forth, its always increased in power of 2 as you move up the chain. Then to convert back to 10-system, you just add all the ”slots” together and 101 becomes 5 because 100 is 4 and 001 is 1.  
+
+
+
 	Terms
 		Checksum
 		ROM
 		Emulator
+		Map16
+		GFX, exGFX
 		
 
 
@@ -203,26 +232,76 @@ Inserting the file will replace the GFX files within the rom with one you specif
 Shared pallettes are, more specifically -katso myöhemmin mitä kirjoittaa tähän lisää-
 
 	levels
-		export import levels to file
+		Export/import multiple levels to file
+		
+Export/import multiple levels from the rom to level file. ”Only export modified levels” option lets you choose if you want to export all of the levels (0x200), creating 512 small files.
 		analyze resources in levels
+				Analyzation menu			
+
+	Lunar Magic 3.31
+04/21/2022  09:57:46 AM
+
+Map16 Tile Usage Report (Non-covered, Non-conditional)
+
+Tile 0 count: 37BA
+	Levels: 2, 1C, BE, C0-C1, C6, CE, F7, 102, 11C, 127, 12D, 1D5
+Tile 1 count: 89
+	Levels: 116, 118, 1BF, 1C2-1C3
+Tile 2 count: 423
+	Levels: 1C, C0, C6, CE, F7, 11C, 12D, 1D5
+Tile 3 count: 351
+	Levels: 116, 118, 1BF, 1C2-1C3
+
+Excrept from the log of the unmodified rom level
+So the level analyzer basically counts everything there is in the ROM. On the log you can see mentions of tiles, if you look at 16x16 tile map editor, tile 0 is water and water appears first time on levels 2 and 1C on default supermario world? Could this be a Coincidence? I think not. So the log tells you exactly how many things of each type there are in ROM and on which levels. It also counts it in hexadecimal for fun and profit.
+According to the sacred texts that is lunar magic help file, it doesnt count tiles that have been covered by other tiles or otherwise have conditions that dont make the tile appear immidiately so it counts only what you can actually see. It also wont analyze bossfight levels or anything else lunarmagic cant render. In addition to tiles it will count sprites, which music tracks are used in which levels and which graphic files are used where.
 		clear original level data area
+		
+	This is meant for making things nicer for 3rd party asm hacks (asm stands for assembly, more about it here https://supermarioworld.fandom.com/wiki/ASM_Hack). According to the sacred texts, there are some sections that wont still be available for use, like chocolate island 2, entrances to castles and other stuff that werent even used in original game. Those have been marked with RATS(Rom-allocaton-tag-system) 
+(term explained here https://www.smwcentral.net/?p=viewthread&t=102891 . It basically means marked as reserved, to prevent conflicts. Its used to prevent patches and tools from mistaking parts of the rom as free space for them to use.)
+
+
 		export multiple levels to image files
+		
+It will create image of your levels in png format. This one will create image for every single level.
 		export level to image file
+		Same as before, but only for level currently open. 
+		
 	emulator
+	Now, despite what someone might claim, EMULATORS ARE COMPLETELY LEGAL TO DOWNLOAD AND USE. Here is a link to further reading about the subject: https://www.howtogeek.com/262758/is-downloading-retro-video-game-roms-ever-legal/
+(Do note that just because I link something here doesnt mean its the only or even the best source of information, use your own judgement.)
+If you are looking for emulator, snes9x is the one I used for purposes of this guide. You can find one from this site: https://www.romhacking.net/
 		run rom in emulator
+		You dont have to specify which emulator to use every time, just the first time if you havent set up its path yet. Just use the path to exe file of the emulator.
 		setup emulator
+		Here you can modify the emulator path setup if you want to. Its same window that is used to setup the emulator at the first time.
 		
 		run/stop internal emulator
+		You need lmsw.dll to use lunar magics internal emulator. It needs to be in same folder as lunar magic itself. You can download the dll here https://www.smwcentral.net/?p=section&a=details&id=20746
+
 		pause, mute
-		swap f4
+		You can pause the emulator while testing your maps. This will let you scroll around the level. The tool creator was so nice that he added a mute so you dont have to listen to your banger soundtracks while editing your levels.
+		swap f4/ctrl+f4
+		Lets you choose if you want to press f4 or ctrl AND f4 to run the internal emulator. 
 	expand rom 2-8mb
-	restore
+	The program automatically expands the ROM as needed so you dont have to use this unless you specifically want to have extra space for something. 
+If you want to use SA-1(...) in your rom to have more than 4MB extra space you (have to do some stuff, i'll get to it some later time.)
+	Memory is precious commodity in romhacks so dont waste it. You can expand the roms capacity only so much. Maybe i'll add a section about memory saving tricks.
+	Restore
+	Restore points are basically your saves for the romhack design process. Do remember to make restore points every now and again or you might find your hard work undone when something causes rom to become unopenable. In case your rom actually becomes unopenable you can get to the restore list by taking any other supermario rom, giving it same filename as one you want to access. You can also just open some other smw rom and browse  to your restore point.
+Incremental restore points save space as they will track only the changes that have been done. Full restore point is always the entire thing.
 		create full restore point
+	As explained above.
 		restore from restore point
+	As explained above.
 		create ips file from rom
+	This will allow you to create patches for your ROM. Its basically portable restoration point you can give to your friends so they dont have to download your entire romhack everytime you want to add yet another bowser to your level.
 		apply ips file to rom
+	Here you can apply the patch you made to your romhack. You can also use separate patching program, like Lunar IPS you can find from here https://fusoya.eludevisibility.org/. 
 	scan rom
-		
+		This will show you quickly some information about your rom. Before you jump to conclusions there are no rats in your computer invading your rom as their sovereign nation, plotting your demise and building their devilish machines to conquer us all. Here is quite good explanation about what RAT means:  https://www.smwcentral.net/?p=viewthread&t=102891
+
+For information about Map16, look here: https://www.smwcentral.net/?p=faq&page=1219828-map16. Its list of all the different tiles in your level.
 	recent files
 
 edit
@@ -376,7 +455,12 @@ help
 
 Sources:
 Some parts might be directly from the source materials which would make those concerned about plagiarization very mad if not properly referenced. For the purposes of getting the guide done i'll write the guide first and worry about references later if at all. I will use direct quotations if its more useful than trying to reword something myself. I will also add my own comments, suggestions and analyzes. 
-Here is the list of sources where i have looked for information, maybe i'll remember to add it all.
+Here is the list of sources where i have looked for information, maybe i'll remember to add it all. I wont add anything that doesnt relate directly to romhacks here, you have to look for those links from where they are first referenced.
+(Do note that just because I link something here doesnt mean its the only or even the best source of information, use your own judgement.)
 
 Lunar magic internal help document
 https://www.romhacking.net/
+https://supermarioworld.fandom.com/wiki/
+https://www.smwcentral.net/
+
+
